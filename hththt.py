@@ -1,4 +1,8 @@
-count_text = input("請輸入數量：")
-print(type(count_text))  # 輸入 3，仍得到 <class 'str'>
-count = int(count_text)  # 把字串轉為整數
-print(count + 1)  # 4
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 5, 1000)
+y = 1 - 0.5 * np.abs(x - 2)
+width = (x + 1) ** 2
+plt.scatter(x, y, s=width, color='lime')
+plt.show()
